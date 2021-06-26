@@ -1,0 +1,277 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* My Resets */
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+/* 	Container */
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+	width: 100%;
+}
+
+/* General Styles */
+html{
+	font-size: 20px;
+}
+body{
+	font-family: 'Work Sans', sans-serif;
+	line-height: 1.5;
+}
+a{
+	text-decoration: none;
+}
+#green{
+	color: var(--secondary);
+}
+.center{
+	text-align: center;
+}
+.padding{
+	padding: 1.5rem  0;
+}
+.margin{
+	margin: 1rem;
+}
+
+p{
+	color: var(--text);
+	font-weight: 300;
+}
+/* Varible */
+:root {
+	--primary: #222946;
+	--secondary: #37b667;
+	--bg: #e9ecfc;
+	--accent: #bcc0d2;
+	--text: #75787e;
+	--text-heading: #020511;
+}
+/* Flexible Image */
+.width-full{
+	width: 100%;
+}
+
+/* Flex */
+.flex{
+	display: flex;
+	text-align: center;
+}
+.justify-center{
+	justify-content: center;
+}
+
+/* Buttons */
+.btn{
+	font-size: 1.1rem;
+	background-color: var(--secondary);
+	padding: 0.8rem 2.5rem;
+	margin-top: 2rem;
+	border-radius: 0.3rem;
+	text-align: center;
+	border: 0;
+}
+.btn a{
+	color: white;
+}
+.btn-secondary{
+	font-size: 1rem;
+	padding: 0.5rem 1.5rem;
+	margin-top: 1rem;
+}
+.font-0{
+	font-size: 0;
+}
+
+/* header */
+
+.navbar{
+	background-color: var(--primary);
+	padding: 1.5rem 1.5rem;
+}
+.logo img{
+	margin-bottom: 1rem;
+}
+.nav-menu li{
+	margin-right: 1rem;
+}
+.nav-menu li a{
+	color: white;
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+/* main */
+/* Hero */
+.hero{
+	background-color: var(--bg);
+}
+.hero h1{
+	font-size: 1.9rem;
+	color: var(--text-heading);
+	font-weight: 650;
+	padding: 1.2rem 0 0.8rem 0;
+}
+.blog article{
+	margin-bottom: 1.8rem;
+}
+
+/* Blog */
+.blog h1{
+	font-size: 2rem;
+	color: var(--text-heading);
+	text-align: center;
+	font-weight: 700;
+	padding: 2rem 0 1.2rem 0;
+}
+.blog h2{
+	font-size: 1.7rem;
+	color: var(--text-heading);
+	font-weight: 600;
+	padding: 1rem 0 0.6rem 0;
+}
+.blog p{
+	font-size: 0.8em;
+}
+
+/* Footer */
+.footer{
+	background-color: var(--primary);
+	color: var(--accent);
+	padding: 1rem;
+}
+.footer .nav-menu{
+	margin-top: 1rem;
+}
+
+
+@media screen and (min-width: 768px) {
+	.flex-L{
+		display: flex;
+		justify-content: space-between;
+	}
+	.align-start{
+		align-items: flex-start;
+	}
+	.align-center{
+		align-items: center;
+	}
+	.flex-30{
+		flex: 0 1 30%;
+	}
+	.flex-44{
+		flex: 0 1 44%;
+	}
+	.btu-A{
+		font-size: 0.9rem;
+		padding: 0.8rem 2.0rem;
+		margin-top: 1rem;
+	}
+	.btn-secondary{
+		font-size: 0.7rem;
+		padding: 0.5rem 0.9rem;
+		margin-top: 1rem;
+	}
+	
+	.navbar{
+		padding: 0.7rem 1rem ;
+	}
+	.logo img{
+		margin: 0rem ;
+	}
+
+	/* Hero */
+	.hero{
+		padding: 0.5rem 1rem;
+	}
+	.hero-artical{
+		position: relative;
+	}
+	.hero h1{
+		font-size: 1.7rem;
+		padding: 0rem 0rem 0.5rem 0rem;
+	}
+	.hero p{
+		font-size: 0.7rem;
+	}
+	.figure{
+		position: absolute;
+		right: 0;
+		top: 1.6rem;
+		bottom: 1.3rem;
+		width: 50%;
+	}
+	/* Blog */
+	.blog-artical{
+		padding: 0.5rem 1rem;
+	}
+	.blog figure{
+		height: 50%;
+		object-fit: cover;
+	}
+	.blog h2{
+		font-size: 1.2rem;
+		padding: 0.7rem 0 0.4rem 0;
+	}
+	.blog p{
+		font-size: 0.6rem;
+	}
+	/* Footer */
+	.footer{
+		padding: 1rem 2.5rem;
+	}
+	.footer .nav-menu{
+		margin-top: 0rem;
+	}
+}
